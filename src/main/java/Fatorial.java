@@ -30,10 +30,10 @@ a) GRAFO DE FLUXO DE CONTROLE (CFG):
   |         \       |
   |          \-----/
   |           (loop)
-  |                 |
-  |------------>[Nó 6: return resultado]
-                    |
-                  [FIM]
+  |             |
+  |----->[Nó 6: return resultado]
+                |
+              [FIM]
 
 b) CAMINHOS INDEPENDENTES:
 - Caminho 1: 1 → 2 → 3 → 6 (n negativo)
