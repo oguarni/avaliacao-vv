@@ -14,26 +14,23 @@ public class Fatorial {
 /*
 a) GRAFO DE FLUXO DE CONTROLE (CFG):
 
-    [INÍCIO]
-       |
-    [Nó 1: resultado = 1]
-       |
-    [Nó 2: n < 0?]
-      / \
-    SIM  NÃO
-    /      \
-[Nó 3]    [Nó 4: i = 1; i <= n?]
-  |            / \
-  |          SIM  NÃO
-  |          /      \
-  |     [Nó 5]      |
-  |         \       |
-  |          \-----/
-  |           (loop)
-  |             |
-  |----->[Nó 6: return resultado]
-                |
-              [FIM]
+```mermaid
+Graph TD
+    A[INÍCIO] --&gt; B[Nó 1: resultado = 1];
+    B --&gt; C{Nó 2: n &lt; 0?};
+    C -- SIM --&gt; D[Nó 3];
+    C -- NÃO --&gt; E{Nó 4: i = 1; i &lt;= n?};
+    D --&gt; G(Nó 6: return resultado);
+    E -- SIM --&gt; F[Nó 5];
+    E -- NÃO --&gt; G;
+    F --&gt; E; /* Loop */
+    G --&gt; H[FIM];
+
+    subgraph Caminhos Independentes
+        P1(Caminho 1: 1 -&gt; 2 -&gt; 3 -&gt; 6 (n negativo));
+        P2(Caminho 2: 1 -&gt; 2 -&gt; 4 -&gt; 6 (n = 0, sem entrar no loop));
+        P3(Caminho 3: 1 -&gt; 2 -&gt; 4 -&gt; 5 -&gt; 4 -&gt; 6 (n &gt; 0, entrando no loop uma vez));
+    end
 
 b) CAMINHOS INDEPENDENTES:
 - Caminho 1: 1 → 2 → 3 → 6 (n negativo)
