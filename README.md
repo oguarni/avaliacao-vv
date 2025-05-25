@@ -192,7 +192,6 @@ graph TB
     P1["Caminho 1: 1 → 2 → 3 → 6 (n negativo)"]
     P2["Caminho 2: 1 → 2 → 4 → 6 (n = 0, sem loop)"]
     P3["Caminho 3: 1 → 2 → 4 → 5 → 4 → 6 (n > 0, com loop)"]
-    end
 ```
 
 #### Análise de Cobertura
