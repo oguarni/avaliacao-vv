@@ -173,7 +173,7 @@ public static boolean isPalindrome(String str) {
 ### Questão 6: Análise de Grafo de Fluxo de Controle
 
 #### a) Grafo de Fluxo de Controle (CFG)
-
+```mermaid
 graph TD
     A[INÍCIO] --> B[Nó 1: resultado = 1]
     B --> C{Nó 2: n < 0?}
@@ -191,7 +191,7 @@ graph TD
         P2["Caminho 2: 1 → 2 → 4 → 6 (n = 0, sem loop)"]
         P3["Caminho 3: 1 → 2 → 4 → 5 → 4 → 6 (n > 0, com loop)"]
     end
-
+```
 #### b) Caminhos Independentes
 
 1. **Caminho 1:** 1 → 2 → 3 → 6 (n negativo)
