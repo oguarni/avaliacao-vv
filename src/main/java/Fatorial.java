@@ -30,7 +30,8 @@ Graph TD
         P2(Caminho 2: 1 -> 2 -> 4 -> 6 (n = 0, sem entrar no loop));
         P3(Caminho 3: 1 -> 2 -> 4 -> 5 -> 4 -> 6 (n > 0, entrando no loop uma vez));
     end
-
+```
+        
 b) CAMINHOS INDEPENDENTES:
 - Caminho 1: 1 → 2 → 3 → 6 (n negativo)
 - Caminho 2: 1 → 2 → 4 → 6 (n = 0, sem entrar no loop)
